@@ -1,18 +1,18 @@
 export const state = () => ({
-  people: []
+  countries: []
 })
 
 export const mutations = {
-  setPeople(state, people) {
-    state.people = people
+  setCountries(state, countries) {
+    state.countries = countries
   }
 }
 
 export const actions = {
   async nuxtServerInit({ commit }, { app }) {
-    const people = await app.$axios.$get(
-      "./random-data.json"
+    const countries = await app.$axios.$get(
+      "https://restcountries.eu/rest/v2/all"
     )
-    commit("setPeople", people.slice(0, 15))
+    commit("setCountries", countries)
   }
 }

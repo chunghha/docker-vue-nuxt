@@ -2,8 +2,8 @@
 <v-layout row>
   <v-flex xs12>
     <v-card>
-      <v-toolbar dark color="primary" style="background: #1890ff;"> 
-        <v-toolbar-side-icon></v-toolbar-side-icon>
+      <v-toolbar dark color="primary" class="toolbar">
+       <v-toolbar-side-icon></v-toolbar-side-icon>
         <v-toolbar-title class="white--text">Docker Vue Nuxt</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn icon>
@@ -12,7 +12,7 @@
       </v-toolbar>
     </v-card>
     <div class="cards">
-      <Card v-for="person in people" :key="person.id" :person="person"></Card>
+      <Card v-for="country in countries" :key="country.name" :country="country"></Card>
     </div>
   </v-flex>
 </v-layout>
@@ -29,16 +29,20 @@ import Card from '~/components/Card.vue';
   }
 })
 export default class extends Vue {
-  @State people;
+  @State countries;
 }
 </script>
 <style scoped>
 .header {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
+}
+
+.toolbar {
+  background: #7986cb;
 }
 </style>
