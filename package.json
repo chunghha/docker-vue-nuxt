@@ -11,15 +11,16 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/vuetify": "^0.4.2",
-    "nuxt-edge": "^2.0.0-25558577.3f1d634",
+    "nuxt-edge": "^2.0.0-25599455.3a0f094",
     "nuxt-property-decorator": "^1.2.0",
     "vuex-class": "^0.3.1"
   },
   "devDependencies": {
-    "@types/node": "^8.10.23",
+    "@types/node": "^10.9.4",
+    "babel-preset-env": "^1.7.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "ts-loader": "^4.4.2",
-    "typescript": "~3.0.1"
+    "ts-loader": "^5.0.0",
+    "typescript": "~3.0.3"
   }
 }
