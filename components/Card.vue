@@ -43,6 +43,7 @@ export default class Card extends Vue {
 
 .flag {
   border: 0.25rem solid #f8f6fb;
+  margin-left: 12px;
 }
 
 .flag-card {
