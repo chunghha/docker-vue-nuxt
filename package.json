@@ -9,14 +9,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.2",
-    "@nuxtjs/vuetify": "^0.4.2",
-    "nuxt": "^2.0.0",
+    "@nuxtjs/axios": "^5.3.3",
+    "@nuxtjs/vuetify": "^0.4.3",
+    "nuxt": "^2.1.0",
     "nuxt-property-decorator": "^1.2.0",
     "vuex-class": "^0.3.1"
   },
   "devDependencies": {
-    "@types/node": "^10.11.2",
+    "@types/node": "^10.11.3",
     "babel-preset-env": "^1.7.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
