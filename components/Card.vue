@@ -29,8 +29,8 @@
         <v-card-title class="headline">Use Google's location service?</v-card-title>
 
         <v-card-text>
-          <div>Latitude  : {{ country.latlng[0] }}</div>
-          <div>Longitude : {{ country.latlng[1] }}</div>
+          <div>Latitude  : {{ !!country.latlng ? country.latlng[0] : '' }}</div>
+          <div>Longitude : {{ !!country.latlng ? country.latlng[1] : '' }}</div>
         </v-card-text>
 
         <v-card-actions>
@@ -82,11 +82,11 @@ export default class Card extends Vue {
 }
 
 .flag-card {
-  background: #e8e6eb;
-  border: 0.05rem solid whitesmoke;
+  background: #f4f4f4;
+  border: 0.1rem solid white;
   display: flex;
   flex-direction: column;
-  margin: 0.15rem;
+  margin: 0.2rem;
   min-height: 460px;
   padding-top: 1rem;
 }

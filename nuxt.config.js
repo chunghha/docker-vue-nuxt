@@ -58,8 +58,18 @@ module.exports = {
   build: {},
   modules: [
     "@nuxtjs/axios",
+    '@nuxtjs/pwa',
     '@nuxtjs/vuetify',
     "~/modules/typescript.js"
   ],
-  axios: {}
+  axios: {},
+  workbox: {
+    importScripts: [
+        'custom-sw.js'
+    ],
+  },
+  manifest: {
+    name: 'Docker Vue Nuxt',
+    lang: 'en'
+  }
 }
