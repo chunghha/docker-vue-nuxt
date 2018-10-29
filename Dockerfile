@@ -1,4 +1,4 @@
-FROM node:8.11.3
+FROM node:10
 
 ENV NODE_ENV=development
 ENV HOST 0.0.0.0
