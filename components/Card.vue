@@ -15,11 +15,46 @@
         <v-card-actions>
           <v-layout align-center justify-space-between row>
             <v-btn flat color="deep-purple">Share</v-btn>
-            <v-btn flat color="deep-purple">Explore</v-btn>
+            <v-btn flat color="deep-purple" @click="dialog = true">Explore</v-btn>
           </v-layout>
         </v-card-actions>
       </v-card>
     </v-flex>
+
+    <v-dialog
+      v-model="dialog"
+      max-width="370"
+    >
+      <v-card>
+        <v-card-title class="headline">Use Google's location service?</v-card-title>
+
+        <v-card-text>
+          <div>Latitude  : {{ country.latlng[0] }}</div>
+          <div>Longitude : {{ country.latlng[1] }}</div>
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn
+            color="green darken-1"
+            flat="flat"
+            @click="dialog = false"
+          >
+            Disagree
+          </v-btn>
+
+          <v-btn
+            color="green darken-1"
+            flat="flat"
+            @click="dialog = false"
+          >
+            Agree
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
   </v-layout>
 </template>
 <script lang="ts">
@@ -32,6 +67,7 @@ import {
 @Component({})
 export default class Card extends Vue {
   @Prop() country
+  dialog = false;
 }
 </script>
 <style scoped>
