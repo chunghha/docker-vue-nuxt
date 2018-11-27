@@ -34,7 +34,7 @@ export default class extends Vue {
 </script>
 <style scoped>
 .header {
-  font-family: Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'IBM Plex Sans', Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cards {

@@ -19,9 +19,9 @@
           <v-card-title primary-title class="grow">
             <div>
               <div class="headline mb-0">{{ country.name }}</div>
-              <div>{{ country.capital }}</div>
-              <div>{{ !!country.population ? country.population.toLocaleString() : '' }}</div>
-              <div>{{ country.subregion }}</div>
+              <div class="country-data">{{ country.capital }}</div>
+              <div class="country-data">{{ !!country.population ? country.population.toLocaleString() : '' }}</div>
+              <div class="country-data">{{ country.subregion }}</div>
             </div>
           </v-card-title>
           <v-card-actions>
@@ -82,7 +82,12 @@ export default class Card extends Vue {
 </script>
 <style scoped>
 .card {
-  font-family: Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'IBM Plex Sans', Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.country-data {
+  font-family: 'IBM Plex Sans', Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
 }
 
 .flag {
